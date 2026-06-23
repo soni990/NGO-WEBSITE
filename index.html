@@ -11,21 +11,22 @@
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
         <!-- logo link -->
-        <link rel="shortcut icon" href="logo2.png" />
+        <link rel="shortcut icon" href="images/logo2.png" />
         <!-- smooth scroll link -->
          <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
     </head>
     <body>
         <header>
             <nav>
-                <img src="logo1.png" alt="Logo" />
-                <ul>
+                <img src="images/logo1.png" alt="Logo" />
+                <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#what">What We Do</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <button>Donate</button>
                 </ul>
+                <div class="menu-btn"><img src="https://img.icons8.com/?size=100&id=36389&format=png&color=000000" alt="menu" /></div>
             </nav>
             <!--Home Section-->
             <div class="head" id="home">
@@ -78,7 +79,7 @@
                 <button>Read More</button>
             </div>
             <div class="about-right-side">
-                <img src="ourimpact.jpg" alt="about-img" />
+                <img src="images/ourimpact.jpg" alt="about-img" />
             </div>
         </section>
         <!-- What section -->
@@ -135,9 +136,9 @@
             </div>
 
             <div class="images">
-                <img src="img1.jpg" alt="img1">
-                <img src="img2.jpg" alt="img1">
-                <img src="img3.jpg" alt="img1">
+                <img src="images/img1.jpg" alt="img1">
+                <img src="images/img2.jpg" alt="img1">
+                <img src="images/img3.jpg" alt="img1">
             </div>
         </section>
         <!-- Action section -->
@@ -183,6 +184,12 @@
                 speed: 1000,
                 speedAsDuration: true,
             });
+            const menuBtn =document.querySelector('.menu-btn')
+            const navLinks=document.querySelector('.nav-links')
+
+            menuBtn.addEventListener('click',function(){
+                navLinks.classList.toggle("active");
+            })
         </script>
     </body>
 </html>
